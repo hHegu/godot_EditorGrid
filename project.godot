@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "EditorGrid",
+"language": "GDScript",
+"path": "res://addons/editor_grid/EditorGrid.gd"
+}, {
+"base": "EditorProperty",
+"class": "EditorGridProperty",
+"language": "GDScript",
+"path": "res://addons/editor_grid/src/grid_editorproperty.gd"
+}, {
+"base": "CheckBox",
+"class": "EditorGrid_GridButton",
+"language": "GDScript",
+"path": "res://addons/editor_grid/src/grid_button.gd"
+}, {
+"base": "VBoxContainer",
+"class": "EditorGrid_GridControl",
+"language": "GDScript",
+"path": "res://addons/editor_grid/src/grid.gd"
+} ]
+_global_script_class_icons={
+"EditorGrid": "",
+"EditorGridProperty": "",
+"EditorGrid_GridButton": "",
+"EditorGrid_GridControl": ""
+}
+
+[application]
+
+config/name="InspectorGridPlugin"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/editor_grid/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

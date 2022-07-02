@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/editor_grid/examples/test_scene.gd" type="Script" id=1]
+[ext_resource path="res://addons/editor_grid/EditorGrid.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+grid = [ [ false, true, false ], [ true, true, true ], [ false, true, false ] ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+grid = SubResource( 1 )
