@@ -33,7 +33,6 @@ func _on_grid_size_changed(amount):
 
 	current_value = get_edited_object().grid
 	var columns = current_value.size()
-	print(amount)
 	if amount > 0:
 		for row in current_value:
 			for i in amount:
